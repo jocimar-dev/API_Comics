@@ -5,7 +5,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name = "marvel", url = "${chamada.marvel}/v1/public")
+@FeignClient(name = "marvel", url = "${chamada.marvel}/v1/public/comics")
 public interface MarvelClient {
 
     @GetMapping("/comics")

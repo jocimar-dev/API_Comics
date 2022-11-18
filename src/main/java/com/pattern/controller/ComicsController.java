@@ -1,9 +1,9 @@
-package com.pattern.contoller;
+package com.pattern.controller;
 
 import com.pattern.model.ComicsResponse;
 import com.pattern.service.ComicsService;
-import com.pattern.service.impl.ComicsServiceImpl;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -15,6 +15,8 @@ import static org.springframework.http.HttpStatus.OK;
 @AllArgsConstructor
 @RequestMapping("/marvel")
 public class ComicsController {
+
+    @Autowired
     private ComicsService service;
 
     @ResponseStatus(OK)
